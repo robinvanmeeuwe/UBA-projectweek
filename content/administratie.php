@@ -31,7 +31,7 @@ while($row = mysqli_fetch_assoc($result)) {
             <td>" . $row["Name"] . "</td>
             <td>" . $row["Description"] . "</td>
             <td>" . $Availability . "</td>
-          <td><a class='nav-link' href='index.php?content=update&bookid=" . $row["BookID"] . "'>update</a></td>          
+          <td><a class='nav-link' href='index.php?content=update&bookid=" . $row["BookID"] .    "'>update</a></td>          
           <td><a class='nav-link' href='index.php?content=Deletescript&bookid=" . $row["BookID"] . "'>delete</a></td>
 
             </tr>"); 

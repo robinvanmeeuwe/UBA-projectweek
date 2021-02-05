@@ -1,6 +1,5 @@
 <?php
 include_once("./scripts/db_connect.php");
-var_dump($_GET);
 
 $getrows = "select * from `book` where BookID = " . $_GET['bookid'];
 $result = $conn->query($getrows);
@@ -16,7 +15,6 @@ if ($row["Availability"] == true){
 else{
     $Availability = true;
 }
-echo $row["Description"];
 echo ("
 <div class='container-fluid margin-fix'>
     <div class='row'>
@@ -76,8 +74,3 @@ document.getElementById('Description').setAttribute('size', '20');
 document.getElementById('').setAttribute('size', '20');
 </script>
 ");
-// $updaterow = "DELETE FROM `book` WHERE `book`.`BookID` = " . $_GET["bookid"];
-// echo $updaterow;
-// $conn->query($updaterow);
-// $conn->close();
-// header("location: ./index.php?content=administratie");
